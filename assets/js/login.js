@@ -23,7 +23,7 @@ $(function() {
         repwd: function(value) {
             var pwd = $('.reg-box [name=password]').val()
             if (pwd !== value) {
-                return '两次密码不一致'
+                return '两次密码不一致！'
             }
         }
     })
@@ -53,7 +53,7 @@ $(function() {
             data: $(this).serialize(),
             success: function(res) {
                 if (res.status !== 0) {
-                    return layer.msg('登录失败')
+                    return layer.msg('登录失败！')
                 }
                 layer.msg('登录成功！')
                     // console.log(res.token);
